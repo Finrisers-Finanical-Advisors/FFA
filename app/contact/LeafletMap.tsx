@@ -14,14 +14,14 @@ import L from "leaflet"
 export default function LeafletMapComponent() {
   return (
     <MapContainer
-      center={[30.2672, -97.7431]} // Austin, TX coordinates
+      center={[30.2672, -97.7431]} 
       zoom={13}
       scrollWheelZoom={false}
       className="h-full w-full rounded-xl"
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution="&copy; OpenStreetMap contributors"
+        attribution="&copy; OpenStreetMap contributors" //donot change this or there might be some legal issues
       />
       <Marker position={[30.2672, -97.7431]}>
         <Popup>
