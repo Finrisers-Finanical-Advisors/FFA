@@ -42,8 +42,10 @@ export function Footer() {
             <ul className="space-y-3">
               {["Home","Services","About Us","Testimonials","Contact"].map((link, idx) => (
                 <li key={idx}>
-                  <Link href={link === "Home" ? "/" : `/${link.toLowerCase().replace(/\s/g,'')}`} 
-                        className="text-card/80 hover:text-primary transition-colors">
+                  <Link
+                    href={link === "Home" ? "/" : `/${link.toLowerCase().replace(/\s/g,'')}`} 
+                    className="text-card/80 hover:text-primary transition-colors"
+                  >
                     {link}
                   </Link>
                 </li>
@@ -96,8 +98,20 @@ export function Footer() {
 
             {/* Social Links */}
             <div className="flex gap-4 mt-6">
-              {[Facebook, Linkedin, Twitter].map((Icon, idx) => (
-                <a key={idx} href="#" className="w-10 h-10 bg-card/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="social">
+              {[
+                //add there links later!!
+                { Icon: Facebook, url: "https://www.facebook.com/YourPage" },
+                { Icon: Linkedin, url: "https://www.linkedin.com/in/YourProfile" },
+                { Icon: Twitter, url: "https://twitter.com/YourHandle" },
+              ].map(({ Icon, url }, idx) => (
+                <a
+                  key={idx}
+                  href={url}
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="w-10 h-10 bg-card/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+                  aria-label="social"
+                >
                   <Icon className="w-5 h-5 text-card" />
                 </a>
               ))}

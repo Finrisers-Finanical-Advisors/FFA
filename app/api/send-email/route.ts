@@ -10,12 +10,12 @@ export async function POST(req: Request) {
       port: 587,
       secure: false,
       auth: {
-        user: process.env.EMAIL_USER, 
-        pass: process.env.EMAIL_PASS, 
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     })
 
-    const info = await transporter.sendMail({
+    await transporter.sendMail({
       from: `"Finrisers Website" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
       replyTo: email,
@@ -30,15 +30,8 @@ Message: ${message}
       `,
     })
 
-    console.log("EMAIL SENT ✅", info)
-
-    return NextResponse.json({
-      success: true,
-      info,
-    })
+    return NextResponse.json({ success: true })
   } catch (error: any) {
-    console.error("FULL ERROR ❌", error)
-
     return NextResponse.json(
       {
         success: false,
@@ -48,4 +41,3 @@ Message: ${message}
     )
   }
 }
-
