@@ -129,7 +129,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <motion.span className="text-primary font-semibold text-sm uppercase tracking-wider" variants={fadeInUp} custom={0.2}>
-              Get in Touch
+              Get in Touchs
             </motion.span>
             <motion.h1 className="text-4xl md:text-5xl font-bold text-foreground mt-4 text-balance" variants={fadeInUp} custom={0.4}>
               Contact Us Today
