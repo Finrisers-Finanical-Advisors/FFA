@@ -117,12 +117,12 @@ export function Header() {
                 <Link href="/services" className="transition-all duration-300 hover:text-primary hover:translate-x-1" onClick={() => setIsMenuOpen(false)}>
                   Services
                 </Link>
+                <Link href="/careers" className="transition-all duration-300 hover:text-primary hover:translate-x-1" onClick={() => setIsMenuOpen(false)}>
+                  Careers
+                </Link>
                 <Link href="/about" className="transition-all duration-300 hover:text-primary hover:translate-x-1" onClick={() => setIsMenuOpen(false)}>
                   About Us
-                </Link>
-                <Link href="#testimonials" className="transition-all duration-300 hover:text-primary hover:translate-x-1" onClick={() => setIsMenuOpen(false)}>
-                  Testimonials
-                </Link>
+                </Link>       
                 <Link href="/contact" className="transition-all duration-300 hover:text-primary hover:translate-x-1" onClick={() => setIsMenuOpen(false)}>
                   Contact
                 </Link>
