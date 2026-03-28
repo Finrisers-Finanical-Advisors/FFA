@@ -9,10 +9,10 @@
 //             {/* Service Areas */}
 //           </h2>
 //           <h3 className="text-xl md:text-2xl font-bold text-foreground">
-//             {/* Serving clients across Mississauga, Hamilton, Toronto, Markham, Vaughan, Brampton, Kitchener, Guelph, St. Catharines, Niagara Falls, Oakville, Burlington, Grimsby, Waterloo, and the surrounding areas. */}
+//             {/* Serving clients across Mississauga, Hamilton, Austin, Markham, Vaughan, Brampton, Kitchener, Guelph, St. Catharines, Niagara Falls, Oakville, Burlington, Grimsby, Waterloo, and the surrounding areas. */}
 //           </h3>
 //           <p className="text-muted-foreground text-lg leading-relaxed">
-//             {/* Finrisers Consulting proudly serves businesses throughout Southern Ontario with expert financial and business advisory services. */}
+//             {/* Finrisers Consulting proudly serves businesses throughout Southern Texas with expert financial and business advisory services. */}
 //           </p>
 //         </div>
 //       </div>

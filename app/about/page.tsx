@@ -113,7 +113,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
             >
               <motion.p className="text-gray-800 text-lg leading-relaxed mb-8 font-light" variants={fadeInUp} custom={0.2}>
-                Finrisers Consulting is a financial and business consultancy incorporated under the Canada Business Corporation Act. Headquartered in Greater Toronto Area - Ontario, Finrisers is specialized in providing a comprehensive and tailored approach in financial advisory and consulting services to public and private sector businesses.
+                Finrisers Consulting is a financial and business consultancy incorporated under the United States Business Corporation Act. Headquartered in Greater Austin Area - Texas, Finrisers is specialized in providing a comprehensive and tailored approach in financial advisory and consulting services to public and private sector businesses.
               </motion.p>
 
               <motion.p className="text-gray-800 text-lg leading-relaxed mb-8 font-light" variants={fadeInUp} custom={0.4}>
