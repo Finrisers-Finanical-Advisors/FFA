@@ -7,9 +7,28 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Business Advisor, Management Consultant in United States',
-  description: 'Expert business advisory and management consulting services. Tax, accounting, and financial consultancy to help your business succeed.',
-  generator: 'v0.app',
+  title: 'Business Consultant in Dallas, TX | Finrisers Advisory Services',
+  description:
+    'Top-rated business consulting in Dallas, Texas. We provide expert tax, accounting, and financial advisory services to help businesses grow, optimize, and succeed.',
+  
+  keywords: [
+    'business consultant Dallas TX',
+    'financial advisor Dallas Texas',
+    'tax consultant Dallas',
+    'accounting services Dallas TX',
+    'management consulting Dallas',
+  ],
+
+  openGraph: {
+    title: 'Business Consultant in Dallas, TX | Finrisers',
+    description:
+      'Professional business advisory, tax, and financial consulting services in Dallas, Texas.',
+    url: 'https://finrisers.com',
+    siteName: 'Finrisers',
+    locale: 'en_US',
+    type: 'website',
+  },
+
   icons: {
     icon: [
       {
