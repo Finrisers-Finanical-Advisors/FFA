@@ -4,6 +4,7 @@ import { NextResponse } from "next/server"
 export async function POST(req: Request) {
   try {
     const { name, email, phone, company, subject, message } = await req.json()
+    const recipient = process.env.CONTACT_FORM_TO || process.env.EMAIL_USER
 
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
@@ -17,7 +18,7 @@ export async function POST(req: Request) {
 
     await transporter.sendMail({
       from: `"Finrisers Website" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER,
+      to: recipient,
       replyTo: email,
       subject: subject || "New Contact Form Submission",
       text: `
