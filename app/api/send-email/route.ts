@@ -16,9 +16,9 @@ export async function POST(req: Request) {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
-      // tls: {
-      //   rejectUnauthorized: false, // Optional: remove if using proper SSL
-      // },
+      tls: {
+        rejectUnauthorized: false, // *Remove when Deploying!!
+      },
     })
 
     await transporter.sendMail({
@@ -36,7 +36,6 @@ Message: ${message}
       `,
     })
 
-    // Only return success flag, no sensitive info
     return NextResponse.json({ success: true })
   } catch (error: any) {
     console.error("❌ Contact form email failed:", error)

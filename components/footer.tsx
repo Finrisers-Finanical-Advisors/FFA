@@ -10,7 +10,6 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
 
-          {/* Company Info */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } }}
@@ -32,7 +31,6 @@ export function Footer() {
             </p>
           </motion.div>
 
-          {/* Quick Links */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0, transition: { delay: 0.1, duration: 0.7, ease: easeOut } }}
@@ -53,7 +51,6 @@ export function Footer() {
             </ul>
           </motion.div>
 
-          {/* Services */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.7, ease: easeOut } }}
@@ -67,7 +64,6 @@ export function Footer() {
             </ul>
           </motion.div>
 
-          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.7, ease: easeOut } }}
@@ -96,7 +92,6 @@ export function Footer() {
               </li>
             </ul>
 
-            {/* Social Links */}
             <div className="flex gap-4 mt-6">
               {[
                 //add there links later!!
@@ -119,7 +114,6 @@ export function Footer() {
           </motion.div>
         </div>
 
-        {/* Bottom Bar */}
         <motion.div
           className="border-t border-card/20 mt-12 pt-8"
           initial={{ opacity: 0, y: 20 }}
@@ -128,7 +122,7 @@ export function Footer() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-card/60 text-sm">
-              © {new Date().getFullYear()} Finrisers FINANCIAL SUCCESS. All rights reserved.
+              © {new Date().getFullYear()} Finrisers All rights reserved.
             </p>
             <div className="flex gap-6">
               {["Privacy Policy","Terms of Service"].map((link, idx) => (

@@ -25,7 +25,6 @@ const services = [
   },
 ]
 
-// TypeScript-safe variants
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -40,7 +39,6 @@ export default function ServicesPage() {
     <main className="min-h-screen">
       <Header />
 
-      {/* Services Hero Image */}
       <section id="services-hero" className="relative min-h-screen flex items-center pt-32 pb-20">
         <div
           className="absolute inset-0 bg-contain bg-center bg-no-repeat"
@@ -48,7 +46,6 @@ export default function ServicesPage() {
         />
       </section>
 
-      {/* Text Section below hero image */}
       <motion.div
         className="container mx-auto px-4 py-12"
         initial="hidden"
@@ -68,7 +65,6 @@ export default function ServicesPage() {
             tailored as per your needs.
           </p>
 
-          {/* Centered Button */}
           <motion.div
             className="mt-10"
             initial={{ opacity: 0, y: 20 }}
@@ -89,7 +85,6 @@ export default function ServicesPage() {
         </div>
       </motion.div>
 
-      {/* Services Grid */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -126,7 +121,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Latest Blog Posts */}
       <section className="bg-white border-y border-gray-100">
         <div className="flex flex-col md:flex-row items-center w-full">
           <motion.div
@@ -175,7 +169,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <motion.section 
         className="py-20 bg-primary text-primary-foreground"
         initial={{ opacity: 0, y: 30 }}

@@ -40,13 +40,11 @@ const stats = [
   { number: "24/7", label: "Support Available" }
 ]
 
-// ✅ TypeScript-safe transition
 const defaultTransition: Transition = {
   duration: 0.6,
-  ease: [0.42, 0, 0.58, 1] // cubic-bezier easeInOut
+  ease: [0.42, 0, 0.58, 1] 
 }
 
-// ✅ TypeScript-safe variants
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: (custom: number = 1) => ({
@@ -69,7 +67,6 @@ export default function AboutPage() {
     <main className="min-h-screen">
       <Header />
 
-      {/* Hero Section */}
       <div className="pt-40 pb-20 bg-gradient-to-b from-secondary to-background">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-5xl mx-auto">
@@ -105,7 +102,6 @@ export default function AboutPage() {
               />
             </motion.div>
 
-            {/* Content Section */}
             <motion.div
               className="mt-16 text-left max-w-5xl mx-auto px-4"
               initial="hidden"
@@ -145,8 +141,6 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* About / Experience / Approach Sections */}
-      {/** Wrap headings, paragraphs, and images with motion.div **/}
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
         <div className="py-24 bg-gray-50 mt-16">
           <div className="container mx-auto px-4 max-w-7xl">
@@ -201,7 +195,6 @@ export default function AboutPage() {
         </div>
       </motion.div>
 
-      {/* About Content / Stats / Values */}
       <motion.section initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
@@ -235,7 +228,6 @@ export default function AboutPage() {
             </motion.div>
           </div>
 
-          {/* Values */}
           <motion.div className="mb-20" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} custom={0.2}>
             <div className="text-center max-w-2xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-foreground mb-4">Our Values</h2>
@@ -256,7 +248,6 @@ export default function AboutPage() {
         </div>
       </motion.section>
 
-      {/* CTA Section */}
       <motion.section className="py-20 bg-primary text-primary-foreground" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} custom={0.2}>
         <div className="container mx-auto px-4 text-center max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Work Together</h2>

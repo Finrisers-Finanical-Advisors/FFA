@@ -49,10 +49,9 @@ export default function ContactPage() {
   const handleChange = (e: any) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
-    setErrors(prev => ({ ...prev, [name]: '' })) // clear error on change
+    setErrors(prev => ({ ...prev, [name]: '' })) 
   }
 
-  // ✅ Validation logic
   const validate = () => {
     const newErrors: { [key: string]: string } = {}
     if (!formData.name.trim()) newErrors.name = "Name is required"
@@ -79,9 +78,7 @@ export default function ContactPage() {
 
       const data = await res.json()
       if (data.success) {
-        // Reset form
         setFormData({ name: '', email: '', phone: '', company: '', subject: '', message: '' })
-        // Show toast
         setToast(true)
         setTimeout(() => setToast(false), 5000)
       } else {
@@ -107,7 +104,6 @@ export default function ContactPage() {
     <main className="min-h-screen relative">
       <Header />
 
-      {/* Toast Notification */}
       {toast && (
         <motion.div
           className="fixed top-6 right-6 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50"
@@ -119,7 +115,6 @@ export default function ContactPage() {
         </motion.div>
       )}
 
-      {/* Hero Section */}
       <motion.div
         className="pt-40 pb-20 bg-white"
         initial="hidden"
@@ -141,12 +136,10 @@ export default function ContactPage() {
         </div>
       </motion.div>
 
-      {/* Contact Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
 
-            {/* Contact Form */}
             <motion.div
               className="bg-card p-8 rounded-xl shadow-sm border border-border"
               initial="hidden"
@@ -251,7 +244,6 @@ export default function ContactPage() {
               </form>
             </motion.div>
 
-            {/* Contact Info + Map (unchanged) */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -290,7 +282,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* CTA + Footer (unchanged) */}
       <motion.section className="py-20 bg-primary" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} custom={0.2}>
         <div className="container mx-auto px-4 text-center max-w-2xl mx-auto">
           <motion.h2 className="text-3xl font-bold text-white mb-6" variants={fadeInUp} custom={0.3}>

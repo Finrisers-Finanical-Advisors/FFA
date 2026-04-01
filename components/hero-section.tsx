@@ -18,7 +18,6 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-32 pb-20">
-      {/* Background Image */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
@@ -31,7 +30,6 @@ export function HeroSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
           <div className="text-card">
             <motion.h1
               className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-white text-balance uppercase mb-6"

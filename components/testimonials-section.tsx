@@ -1,40 +1,42 @@
-"use client"
+//for later 
+// "use client"
 
-import { useState } from "react"
-import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react"
-import { Button } from "@/components/ui/button"
+// import { useState } from "react"
+// import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react"
+// import { Button } from "@/components/ui/button"
 
-const testimonials = [
-  {
-    name: "Dazzle Dezine",
-    role: "Business Owner",
-    content: "Very professional and knowledge staff, I highly recommend Finrisers for all your accounting needs.",
-    rating: 5
-  },
-  {
-    name: "Fawad Omer",
-    role: "Entrepreneur",
-    content: "Azam is a thorough professional and committed to delivering excellent service every time. Would not hesitate to recommend to anyone in need of sound financial and business advice.",
-    rating: 5
-  },
-  {
-    name: "Kamran Abdulsalam",
-    role: "Business Owner",
-    content: "Finrisers Consulting is an emblem of quality services, trustworthiness & an incredible professionalism, which stands second to none!",
-    rating: 5
-  }
-]
+// const testimonials = [
+//   {
+//     name: "Dazzle Dezine",
+//     role: "Business Owner",
+//     content: "Very professional and knowledge staff, I highly recommend Finrisers for all your accounting needs.",
+//     rating: 5
+//   },
+//   {
+//     name: "Fawad Omer",
+//     role: "Entrepreneur",
+//     content: "Azam is a thorough professional and committed to delivering excellent service every time. Would not hesitate to recommend to anyone in need of sound financial and business advice.",
+//     rating: 5
+//   },
+//   {
+//     name: "Kamran Abdulsalam",
+//     role: "Business Owner",
+//     content: "Finrisers Consulting is an emblem of quality services, trustworthiness & an incredible professionalism, which stands second to none!",
+//     rating: 5
+//   }
+// ]
 
-export function TestimonialsSection() {
-  const [currentIndex, setCurrentIndex] = useState(0)
+// export function TestimonialsSection() {
+//   const [currentIndex, setCurrentIndex] = useState(0)
 
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-  }
+//   const nextTestimonial = () => {
+//     setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+//   }
 
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+//   const prevTestimonial = () => {
+//     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+//   }
+
 
   // return (
   //   <section id="testimonials" className="py-20 bg-primary text-primary-foreground">
@@ -104,4 +106,4 @@ export function TestimonialsSection() {
   //     </div>
   //   </section>
   // )
-}
+// }

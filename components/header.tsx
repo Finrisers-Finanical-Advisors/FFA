@@ -24,7 +24,6 @@ export function Header() {
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } }}
     >
-      {/* Top bar */}
       <motion.div
         className="bg-primary text-primary-foreground py-2"
         initial={{ opacity: 0 }}
@@ -44,7 +43,6 @@ export function Header() {
         </div>
       </motion.div>
 
-      {/* Main navigation */}
       <motion.nav
         className="container mx-auto px-4 py-4"
         initial={{ opacity: 0, y: -10 }}
@@ -62,7 +60,6 @@ export function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             <Link href="/" className={linkClasses("/")}>
               Home
@@ -87,7 +84,6 @@ export function Header() {
             </Button>
           </div>
 
-          {/* Mobile menu button */}
           <button
             className="lg:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -97,7 +93,6 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         <motion.div
           initial={false}
           animate={
