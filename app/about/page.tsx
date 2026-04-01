@@ -6,6 +6,8 @@ import { ScrollToTop } from "@/components/scroll-to-top"
 import { CheckCircle, Award, Users, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion, Variants, Transition } from "framer-motion"
+import Link from "next/link"
+
 
 const highlights = [
   "Deep-rooted knowledge of USA business environment",
@@ -77,7 +79,7 @@ export default function AboutPage() {
               variants={fadeInUp}
               custom={0.5}
             >
-              About Finrisers Consulting (CPA Professional Corporation)
+              About Finrisers Consulting
             </motion.h1>
 
             <motion.p
@@ -109,7 +111,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
             >
               <motion.p className="text-gray-800 text-lg leading-relaxed mb-8 font-light" variants={fadeInUp} custom={0.2}>
-                Finrisers Consulting is a financial and business consultancy incorporated under the United States Business Corporation Act. Headquartered in Greater Austin Area - Texas, Finrisers is specialized in providing a comprehensive and tailored approach in financial advisory and consulting services to public and private sector businesses.
+                Finrisers Consulting is a financial and business consultancy incorporated under the United States Laws. Headquartered in Austin Area - Texas, Finrisers is specialized in providing a comprehensive and tailored approach in financial advisory and consulting services to public and private sector businesses.
               </motion.p>
 
               <motion.p className="text-gray-800 text-lg leading-relaxed mb-8 font-light" variants={fadeInUp} custom={0.4}>
@@ -254,9 +256,15 @@ export default function AboutPage() {
           <p className="text-lg mb-8 opacity-90">
             Contact us today to discuss how Finrisers Consulting can help your business succeed.
           </p>
-          <Button size="lg" variant="secondary" className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary">
-            Schedule a Consultation
-          </Button>
+          <Link href="/contact">
+         <Button
+          size="lg"
+          variant="secondary"
+          className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary"
+         >
+           Schedule a Consultation
+         </Button>
+         </Link>
         </div>
       </motion.section>
 

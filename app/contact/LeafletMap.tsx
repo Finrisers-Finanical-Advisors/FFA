@@ -24,7 +24,8 @@ export default function LeafletMapComponent() {
       />
       <Marker position={[30.2672, -97.7431]}>
         <Popup>
-          5900 Balcones Drive Suite 100<br />Austin, TX 78731
+          5900 Balcones Drive, Suite 5506<br />
+          Austin, TX 78731, United States<br />
         </Popup>
       </Marker>
     </MapContainer>

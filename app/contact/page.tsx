@@ -96,7 +96,7 @@ export default function ContactPage() {
   const contactInfo = [
     { icon: Phone, title: "Phone", content: "(408) 415-1696", link: "tel:+14084151696" },
     { icon: Mail, title: "Email", content: "info@finrisers.com", link: "mailto:info@finrisers.com" },
-    { icon: MapPin, title: "Office", content: "5900 Balcones Drive Suite 100\nAustin, TX 78731" },
+    { icon: MapPin, title: "Office", content: "5900 Balcones Drive, Suite 5506\nAustin, TX 78731\nUnited States" },
     { icon: Clock, title: "Hours", content: "Mon-Fri: 9AM - 6PM\nSat-Sun: By Appointment" }
   ]
 

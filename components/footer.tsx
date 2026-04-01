@@ -74,8 +74,9 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-card/80">
-                  5900 Balcones Drive Suite 100 Austin<br />
-                  TX 78731 States L8P 1A1
+                  5900 Balcones Drive, Suite 5506<br />
+                  Austin, TX 78731<br />
+                  United States
                 </span>
               </li>
               <li className="flex items-center gap-3">
