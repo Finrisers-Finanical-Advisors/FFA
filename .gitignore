@@ -9,3 +9,11 @@ node_modules/
 .env*.local
 .DS_Store
 .vercel
+
+
+# files
+about-section.tsx
+locations-section.tsx
+services-section.tsx
+testimonials-section.tsx
+value-props-section.tsx
