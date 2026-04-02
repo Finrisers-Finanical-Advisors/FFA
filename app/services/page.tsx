@@ -6,6 +6,8 @@ import { ScrollToTop } from "@/components/scroll-to-top"
 import { ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion, Variants, easeOut } from "framer-motion"
+import Link from "next/link"
+
 
 const services = [
   {
@@ -180,9 +182,15 @@ export default function ServicesPage() {
           <p className="text-lg mb-8 opacity-90">
             Schedule a free consultation with our team to discuss how we can help your business succeed.
           </p>
-          <Button size="lg" variant="secondary" className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary">
-            Schedule Consultation
-          </Button>
+          <Link href="/contact">
+         <Button
+          size="lg"
+          variant="secondary"
+          className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary"
+         >
+           Schedule a Consultation
+         </Button>
+         </Link>
         </div>
       </motion.section>
 

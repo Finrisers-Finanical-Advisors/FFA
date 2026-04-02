@@ -79,9 +79,11 @@ export function Header() {
           </div>
 
           <div className="hidden lg:block">
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:scale-105">
+            <Link href="/contact">
+           <Button className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:scale-105">
               Free Consultation
-            </Button>
+           </Button>
+            </Link>
           </div>
 
           <button
