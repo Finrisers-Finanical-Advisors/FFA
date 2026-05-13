@@ -150,7 +150,7 @@ export default function ServicesPage() {
             
             <p className="text-gray-700 text-lg leading-relaxed mb-10 max-w-xl font-light">
               Keep yourself updated with the latest news and blogs by Finrisers Consulting 
-              (CPA Professional Corporation) that you can count on from tax management 
+              that you can count on from tax management 
               to financial consultancy for your business-related query.
             </p>
 

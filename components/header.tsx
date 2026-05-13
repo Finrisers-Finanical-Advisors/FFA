@@ -31,9 +31,9 @@ export function Header() {
       >
         <div className="container mx-auto px-4 flex flex-wrap justify-center md:justify-between items-center gap-4 text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:+19055551234" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <a href="tel:+17374195117" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <Phone className="w-4 h-4" />
-              <span>(408) 415-1696</span>
+              <span>(737) 419-5117</span>
             </a>
             <a href="mailto:info@finrisers.com" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <Mail className="w-4 h-4" />
