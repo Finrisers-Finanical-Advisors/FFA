@@ -151,3 +151,44 @@
 .leaflet-pane {
   z-index: 0 !important;
 }
+
+/* Legal content pages (privacy policy, terms, cookie policy, etc.) */
+.legal-content h2 {
+  @apply text-2xl font-bold text-[#4a1d12] mt-10 mb-4;
+}
+
+.legal-content h2:first-child {
+  @apply mt-0;
+}
+
+.legal-content h3 {
+  @apply text-lg font-semibold text-[#4a1d12] mt-6 mb-3;
+}
+
+.legal-content p {
+  @apply leading-relaxed mb-4;
+}
+
+.legal-content ul {
+  @apply list-disc list-outside pl-5 space-y-2 mb-4;
+}
+
+.legal-content li {
+  @apply leading-relaxed;
+}
+
+.legal-content a {
+  @apply text-primary underline hover:text-primary/80;
+}
+
+.legal-content table {
+  @apply w-full border-collapse mb-6 text-sm;
+}
+
+.legal-content th {
+  @apply text-left font-semibold text-[#4a1d12] border border-border p-3 bg-secondary;
+}
+
+.legal-content td {
+  @apply border border-border p-3 align-top;
+}

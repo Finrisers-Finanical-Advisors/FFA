@@ -1,8 +1,26 @@
 "use client"
 
+import { Fragment } from "react"
 import Link from "next/link"
 import { Phone, Mail, MapPin, Facebook, Linkedin, Twitter } from "lucide-react"
 import { motion, easeOut } from "framer-motion"
+
+const offices = [
+  {
+    name: "United States",
+    lines: ["Finrisers LLC", "5900 Balcones Drive, Suite 5506", "Austin, TX 78731, USA"],
+    phone: "(737) 419-5117",
+    tel: "tel:+17374195117",
+    email: "salman@finrisers.com",
+  },
+  {
+    name: "Pakistan",
+    lines: ["Finrisers", "86/II Khayaban-e-Muhafiz, DHA Phase VI", "Karachi, Pakistan"],
+    phone: "+92 345 8282316",
+    tel: "tel:+923458282316",
+    email: "salman@finrisers.com",
+  },
+]
 
 export function Footer() {
   return (
@@ -66,54 +84,88 @@ export function Footer() {
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.7, ease: easeOut } }}
+            whileInView={{ opacity: 1, y: 0, transition: { delay: 0.25, duration: 0.7, ease: easeOut } }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            <h3 className="text-lg font-bold text-card mb-6">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-card/80">
-                  5900 Balcones Drive, Suite 5506<br />
-                  Austin, TX 78731<br />
-                  United States
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+17374195117" className="text-card/80 hover:text-primary transition-colors">
-                  (737) 419-5117
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="mailto:info@finrisers.com" className="text-card/80 hover:text-primary transition-colors">
-                  info@finrisers.com
-                </a>
-              </li>
-            </ul>
-
-            <div className="flex gap-4 mt-6">
+            <h3 className="text-lg font-bold text-card mb-6">Useful Link</h3>
+            <ul className="space-y-3">
               {[
-                //add there links later!!
-                { Icon: Facebook, url: "https://www.facebook.com/YourPage" },
-                { Icon: Linkedin, url: "https://www.linkedin.com/in/YourProfile" },
-                { Icon: Twitter, url: "https://twitter.com/YourHandle" },
-              ].map(({ Icon, url }, idx) => (
-                <a
-                  key={idx}
-                  href={url}
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="w-10 h-10 bg-card/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
-                  aria-label="social"
-                >
-                  <Icon className="w-5 h-5 text-card" />
-                </a>
+                { label: "Website Privacy Policy", href: "/privacy-policy" },
+                { label: "External Privacy Notice", href: "/external-privacy-notice" },
+                { label: "Terms and Conditions", href: "/terms-and-conditions" },
+                { label: "Cookie Policy", href: "/cookie-policy" },
+              ].map((link, idx) => (
+                <li key={idx}>
+                  <Link href={link.href} className="text-card/80 hover:text-primary transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </motion.div>
+
         </div>
+
+        <motion.div
+          className="mt-12 pt-12 border-t border-card/10"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <h3 className="text-lg font-bold text-card mb-6">Contact Us</h3>
+          <div className="grid sm:grid-cols-2 gap-8">
+            {offices.map((office, idx) => (
+              <div key={idx}>
+                <p className="text-card/60 text-xs font-semibold uppercase tracking-wider mb-2">{office.name}</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-card/80">
+                      {office.lines.map((line, lineIdx) => (
+                        <Fragment key={lineIdx}>
+                          {line}
+                          {lineIdx < office.lines.length - 1 && <br />}
+                        </Fragment>
+                      ))}
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <Phone className="w-5 h-5 text-primary flex-shrink-0" />
+                    <a href={office.tel} className="text-card/80 hover:text-primary transition-colors">
+                      {office.phone}
+                    </a>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <Mail className="w-5 h-5 text-primary flex-shrink-0" />
+                    <a href={`mailto:${office.email}`} className="text-card/80 hover:text-primary transition-colors">
+                      {office.email}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex gap-4 mt-8">
+            {[
+              //add there links later!!
+              { Icon: Facebook, url: "https://www.facebook.com/YourPage" },
+              { Icon: Linkedin, url: "https://www.linkedin.com/in/YourProfile" },
+              { Icon: Twitter, url: "https://twitter.com/YourHandle" },
+            ].map(({ Icon, url }, idx) => (
+              <a
+                key={idx}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-card/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+                aria-label="social"
+              >
+                <Icon className="w-5 h-5 text-card" />
+              </a>
+            ))}
+          </div>
+        </motion.div>
 
         <motion.div
           className="border-t border-card/20 mt-12 pt-8"
@@ -126,9 +178,12 @@ export function Footer() {
               © {new Date().getFullYear()} Finrisers All rights reserved.
             </p>
             <div className="flex gap-6">
-              {["Privacy Policy","Terms of Service"].map((link, idx) => (
-                <Link key={idx} href="#" className="text-card/60 hover:text-primary text-sm transition-colors">
-                  {link}
+              {[
+                { label: "Privacy Policy", href: "/privacy-policy" },
+                { label: "Terms of Service", href: "/terms-and-conditions" },
+              ].map((link, idx) => (
+                <Link key={idx} href={link.href} className="text-card/60 hover:text-primary text-sm transition-colors">
+                  {link.label}
                 </Link>
               ))}
             </div>

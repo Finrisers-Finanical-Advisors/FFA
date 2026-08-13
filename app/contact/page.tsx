@@ -3,6 +3,7 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ScrollToTop } from "@/components/scroll-to-top"
+import Link from "next/link"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
@@ -231,6 +232,15 @@ export default function ContactPage() {
                   {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                 </motion.div>
 
+                <motion.p className="text-sm text-muted-foreground" variants={fadeInUp} custom={0.75}>
+                  By submitting this form, you agree that we may process your personal information in
+                  accordance with our{" "}
+                  <Link href="/external-privacy-notice" className="text-primary underline hover:text-primary/80">
+                    Privacy Notice
+                  </Link>
+                  .
+                </motion.p>
+
                 <motion.div variants={fadeInUp} custom={0.8}>
                   <Button
                     type="submit"
@@ -288,7 +298,7 @@ export default function ContactPage() {
             Prefer a Phone Call?
           </motion.h2>
           <motion.p className="text-white text-lg mb-8" variants={fadeInUp} custom={0.4}>
-            Call us directly at (408) 415-1696 or schedule a free consultation
+            Call us directly at (737) 419-5117 or schedule a free consultation
           </motion.p>
           <motion.div variants={fadeInUp} custom={0.5}>
             <Button size="lg" className="bg-white hover:bg-gray-100 text-primary">
